@@ -11,7 +11,6 @@ from battery.splinder_battery import SplinderBattery
 
 
 class CarFactory:
-
     def create_calliope(current_date, last_service_date, current_mileage, last_service_mileage):
         engine = CapuletEngine(last_service_mileage, current_mileage)
         battery = SplinderBattery(last_service_date, current_date)
@@ -24,8 +23,8 @@ class CarFactory:
         car = Car(engine, battery)
         return car
 
-    def create_palindrome(current_date, last_service_date, current_mileage, last_service_mileage):
-        engine = SternmanEngine(last_service_mileage, current_mileage)
+    def create_palindrome(current_date, last_service_date,warning_light_is_on):
+        engine = SternmanEngine(warning_light_is_on)
         battery = SplinderBattery(last_service_date, current_date)
         car = Car(engine, battery)
         return car
