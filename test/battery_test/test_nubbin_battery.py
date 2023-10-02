@@ -1,6 +1,9 @@
+import os, sys
+sys.path.insert(0, os.path.abspath(".."))
+
 import unittest
 from datetime import datetime
-from battery.nubbin_battery import NubbinBattery
+from battery.battery.nubbin_battery import NubbinBattery
 
 class TestNubbinBattery(unittest.TestCase):
     def test_battery_should_be_service(self):
